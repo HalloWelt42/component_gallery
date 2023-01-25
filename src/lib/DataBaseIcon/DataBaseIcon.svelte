@@ -22,6 +22,9 @@
             case States.offline:
                 css_classes = {layer_a: state.toString(), layer_b: ""}
                 break;
+            case States.has_content:
+                css_classes = {layer_a: "", layer_b: "hidden"}
+                break;
             default:
                 css_classes = {layer_a: state.toString(), layer_b: "hidden"}
         }
@@ -40,12 +43,12 @@
 
 
 <style>
-    .layer-b {
-        position: relative;
-    }
-
     .layer-a {
         position: absolute;
+    }
+
+    .layer-b {
+        position: relative;
     }
 
     .full,.fa-slash {
@@ -61,11 +64,17 @@
     }
 
     .ready {
-        color: hsl(141, 71%, 48%);
+        animation-name: pulse;
+        animation-duration: 0.3s;
     }
 
     .hidden {
         visibility: hidden;
+    }
+
+    @keyframes pulse {
+        from {color: hsl(141, 71%, 48%);}
+        to {color: initial;}
     }
 
 </style>

@@ -3,7 +3,8 @@ enum States {
     busy,
     ready,
     offline,
-    full
+    full,
+    has_content
 }
 
 export {States}
