@@ -1,4 +1,5 @@
 <script lang="ts">
+
     import {States} from "./States.ts";
 
     export let current_state: States;
@@ -27,21 +28,16 @@
         return css_classes;
     }
 
-    $:{
-        css_classes = getCSSClasses(current_state);
-        console.log(css_classes);
-    }
+    $:{css_classes = getCSSClasses(current_state);}
+
 </script>
+
 
 <div>
     <i class="layer-a fa-solid fa-database icon is-large fa-2x {css_classes.layer_a}"></i>
     <i class="layer-b fa-solid fa-slash icon is-large fa-2x {css_classes.layer_b}"></i>
 </div>
 
-<!--{#if current_state === States.busy}-->
-<!--    <i class="layer-a fa-solid fa-database icon is-large fa-2x empty"></i>-->
-<!--    <i class="layer-b fa-solid fa-slash icon is-large fa-2x"></i>-->
-<!--{/if}-->
 
 <style>
     .layer-b {
@@ -72,5 +68,4 @@
         visibility: hidden;
     }
 
-    /* more options ..*/
 </style>
