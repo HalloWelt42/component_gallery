@@ -1,5 +1,5 @@
 <script lang="ts">
-import ComponentTester from "./lib/DataBaseIcon/ComponentTester.svelte";
+import WordPressDownloadCounter from "./lib/WordPressDownloadCounter/WordPressDownloadCounter.svelte";
 </script>
 
-<ComponentTester />
+<WordPressDownloadCounter />
